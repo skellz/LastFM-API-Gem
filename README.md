@@ -18,11 +18,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+artist = LastRubyFm::Artist.search('Mumford and Sons').first
+artist.name # 'Mumford and Sons'
+artist.image # 'http://userserve-ak.last.fm/serve/500/49582427/Mumford++Sons++PNG.png'
+
+album = LastRubyFm::Album.search('Purple')[1]
+album.artist  # 'Stone Temple Pilots'
+album.tracks # retrieves a list of LastRubyFm::Track objects for the given album
 
 ## Contributing
 
-1. Fork it ( http://github.com/<my-github-username>/last_ruby_fm/fork )
+1. Fork it ( http://github.com/skellz/last_ruby_fm/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
